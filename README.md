@@ -5,8 +5,8 @@
 
 Many CIAM customers have multiple user stores that need to be maintained until legacy systems can be decommissioned.
 When the identity information sourced in Okta changes these users and attributes need to be synchronized downstream. Okta Workflows provides an easy to implement, fully customizable method to update a remote system with CRUD (create, update and delete) operations.
-In this example another Okta Org is used as a target system. This integration uses Okta Group membership to identify those users that shall be synced. Adding a user to the group initiates the creation in the remote system. Removing a user from group deletes the user from remote system.
-Since deleting a user in Okta requires 2 API calls, one to DEACTIVATE and a second to DELETE, you adjust the DELETE User child flow to match your remote system requirements. In this sample the users name, address and email are synced to remote system. The flos can be modified to change attribute sync requirements.
+ This integration uses Okta Group membership to identify those users that shall be synced. Adding a user to the group initiates the creation in the remote system. Removing a user from group deletes the user from remote system.
+In this sample another Okta Org is used as a target system. Since deleting a user in Okta requires 2 API calls, one to DEACTIVATE and a second to DELETE, you adjust the DELETE User child flow to match your remote system requirements. Also in this sample the users name, address and email are synced to remote system. The flows can be modified to change attribute sync requirements.
 
 The implementation uses a module approach that splits the downstream CRUD operations into child flows to facilitate adaptation to complex environments.
 
