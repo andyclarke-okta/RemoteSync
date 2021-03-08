@@ -8,7 +8,7 @@ When the identity information sourced in Okta changes these users and attributes
 This integration uses Okta Group membership to identify those users that shall be synced. Adding a user to the group initiates the creation in the remote system. Removing a user from group deletes the user from remote system.
 In this sample the users name, address and email are synced to remote system. The flows can be modified to change attribute sync requirements. 
 
-The implementation uses a module approach that splits the downstream CRUD operations into child flows to facilitate adaptation to complex environments.
+The implementation uses a modular approach that splits the downstream CRUD operations into child flows to facilitate adaptation to complex environments.
 
 ## Before you get Started / Prerequisites
 
@@ -17,7 +17,7 @@ Before you get started, here are the things you’ll need:
 
 
 *   Access to an Okta tenant with Okta Workflows enabled for your Org 
-*   The Remote System API calls in this sample are using a mock API. No setup is required
+*   The Remote System API calls in this sample are using a mock API. Create HTTP Connector for mock API Auth = none
 
 
 ## Setup Steps
